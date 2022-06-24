@@ -2,7 +2,7 @@
 cargo new --lib xxx
 ```
 
-Cargo.toml
+#### Cargo.toml
 
 ```toml
 [dependencies]
@@ -12,7 +12,7 @@ wasm-bindgen = "0.2.81"
 crate-type = ["cdylib"]
 ```
 
-lib.rs
+#### lib.rs
 
 ```rs
 use wasm_bindgen::prelude::*;
@@ -23,7 +23,7 @@ pub fn add(left: usize, right: usize) -> usize {
 }
 ```
 
-构建
+#### 构建
 
 ```
 // 会生成到 pkg 目录
@@ -43,7 +43,7 @@ xxx.js 本质上有无都可以，你可以直接使用 xxx_bg.wasm 来消费。
 
 但好处在于 xxx.js 是由 wasm-pack 生成的，内部有加载函数和 lib 结构，把一些能力都给做好了，也没过多的无用代码，用起来是非常方便的。
 
-使用
+#### 使用
 
 ```html
 // xxx.js default 是一个初始化函数，反回一个 wasm 的原始 exports，和 wasm
@@ -73,3 +73,7 @@ xxx.js 本质上有无都可以，你可以直接使用 xxx_bg.wasm 来消费。
   const { add } = initSync(byte);
 </script>
 ```
+
+#### npm 发布/消费
+
+消费侧可以无痛使用。（.wasm 的存放问题、存放在本地的读取问题（asset cdn环境））
