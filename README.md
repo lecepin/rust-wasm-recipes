@@ -25,6 +25,10 @@ pub fn add(left: usize, right: usize) -> usize {
 
 #### 构建
 
+https://rustwasm.github.io/docs/wasm-bindgen/reference/deployment.html
+
+直接使用就用 `--target web`，否则需要用 webpack 处理。
+
 ```
 // 会生成到 pkg 目录
 wasm-pack build --target web
@@ -76,4 +80,16 @@ xxx.js 本质上有无都可以，你可以直接使用 xxx_bg.wasm 来消费。
 
 #### npm 发布/消费
 
-消费侧可以无痛使用。（.wasm 的存放问题、存放在本地的读取问题（asset cdn环境））
+
+```
+wasm-pack build 
+wasm-pack publish
+```
+
+即可，会根据 Cargo.toml 的信息生成 package.json。
+
+> 默认 wasm-pack build 是生成 webpack 能支持的代码，所以需要在用 webpack 去构建。
+> 
+> 注意 cdn 情况下加载路径的问题。
+
+https://webpack.docschina.org/configuration/output/#outputpublicpath
