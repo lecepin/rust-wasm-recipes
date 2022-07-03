@@ -1,0 +1,5 @@
+- `wasm_bindgen::JsCast;`
+- `Closure::wrap(Box::new(move || update_time(&current_time)) as Box<dyn Fn()>);`
+- `Closure::wrap(Box::new(move || { clicks += 1; num_clicks.set_inner_html(&clicks.to_string()); }) as Box<dyn FnMut()>);`
+- `.forget()`
+- 闭包对外层生命周期的影响

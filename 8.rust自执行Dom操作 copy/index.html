@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm demo</title>
+    <style>
+      #green-square {
+        background: green;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        color: white;
+      }
+      #green-square span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Loading...</div>
+    <div id="script" style="display: none">
+      <p>
+        The current time is:
+        <span id="current-time">...</span>
+      </p>
+
+      <div id="green-square">
+        <span>Click me!</span>
+      </div>
+      <p>
+        You've clicked the green square
+        <span id="num-clicks">0</span>
+        times
+      </p>
+    </div>
+    <script type="module">
+      import initWasm from "./pkg/lp_demo_rust_wasm.js";
+      initWasm();
+    </script>
+  </body>
+</html>
