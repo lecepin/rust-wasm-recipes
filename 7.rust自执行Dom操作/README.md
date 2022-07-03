@@ -13,3 +13,4 @@ initWasm().catch((e) => {
 ```
 
 并没有获得预期的有效信息：
+![image](https://user-images.githubusercontent.com/11046969/177038094-f5538a12-f44c-4aed-9cf9-bf97d43733d8.png)
