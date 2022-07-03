@@ -1,7 +1,11 @@
 示例中通过 expect 的方式，错误情况下，如：
 
 ```rust
-let body = document.body().expect("document should have a body");
+pub fn run() -> Result<(), JsValue> {
+  ...
+    let body = document.body().expect("document should have a body");
+  ...
+}
 ```
 
 ```js
