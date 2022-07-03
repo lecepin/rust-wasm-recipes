@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm demo</title>
+  </head>
+
+  <body>
+    <script type="module">
+      import initWasm from "./pkg/lp_demo_rust_wasm.js";
+      initWasm();
+
+      // 出错的情况
+      // document.body.remove();
+      // import initWasm from "./pkg/lp_demo_rust_wasm.js";
+      // initWasm().catch((e) => {
+      //   console.log({ e });
+      // });
+    </script>
+  </body>
+</html>
