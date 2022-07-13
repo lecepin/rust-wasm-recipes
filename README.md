@@ -3,3 +3,5 @@
 统一通过 `wasm-pack build --target web` 构建。
 
 > Rust 生产力太低了。。。
+
+![](logo.jpg)
