@@ -16,3 +16,6 @@
 - [ ] [6.rust的错误处理](./6.rust的错误处理)
 - [x] [7.rust自执行Dom操作](./7.rust自执行Dom操作)
 - [x] [8.rust自执行定时器&闭包计数&jsArray](./8.rust自执行定时器&闭包计数&jsArray)
+- [ ] 9.rust 异步与js Promise
+- [ ] 10.rust 消费 js 模块
+
