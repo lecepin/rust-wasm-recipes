@@ -1,3 +1,8 @@
+### Ref
+- [Serializing and Deserializing Arbitrary Data Into and From JsValue with Serde ](https://rustwasm.github.io/wasm-bindgen/reference/arbitrary-data-with-serde.html)
+
+---
+
 ```toml
 [dependencies]
 serde_json = "1.0.83"
