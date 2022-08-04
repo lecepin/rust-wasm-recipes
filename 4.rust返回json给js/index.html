@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm demo</title>
+  </head>
+
+  <body>
+    <script type="module">
+      import initWasm, {
+        get_json_from_wasm_by_struct,
+        get_json_from_wasm_by_str,
+        get_json_from_wasm_by_splice_var,
+      } from "./pkg/lp_demo_rust_wasm.js";
+      initWasm().then(() => {
+        console.log(
+          "get_json_from_wasm_by_struct",
+          get_json_from_wasm_by_struct()
+        );
+        console.log("get_json_from_wasm_by_str", get_json_from_wasm_by_str());
+        console.log(
+          "get_json_from_wasm_by_splice_var",
+          get_json_from_wasm_by_splice_var()
+        );
+      });
+    </script>
+  </body>
+</html>
